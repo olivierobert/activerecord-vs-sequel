@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:14.4
+    container_name: ars_db
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_DB=ars_develop
+    ports:
+      - "5432:5432"
